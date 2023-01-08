@@ -7,8 +7,6 @@ let date = d.getDate();
 let monthName = d.getUTCMonth();
 let year = d.getFullYear();
 let dateString = null;
-convertDayName(day);
-convertMonthName(month);
 
 function convertDayName(day) {
   switch (day) {
@@ -82,6 +80,8 @@ function convertMonthName(month) {
 returnDate();
 
 function returnDate() {
+  convertDayName(day);
+  convertMonthName(month);
   dateString = `Today is ${dayname} the ${date}th of ${monthName} ${year}`;
 
   return dateString;
