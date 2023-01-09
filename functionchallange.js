@@ -63,23 +63,45 @@
 //   z = x.replaceAll(" ", "");
 //   return z;
 // }
-function points(games) {
-  let score = 0;
-  for (i = 0; i < games.length; i++) {
-    let x = games[i];
+// function points(games) {
+//   let score = 0;
+//   for (i = 0; i < games.length; i++) {
+//     let x = games[i];
 
-    if (x[0] > x[2]) {
-      score += 3;
-      console.log(y);
-      console.log(z);
-      console.log(score);
-    }
-    if (x[0] == x[2]) {
-      score++;
-      console.log(y);
-      console.log(z);
-      console.log(score);
-    }
+//     if (x[0] > x[2]) {
+//       score += 3;
+//       console.log(y);
+//       console.log(z);
+//       console.log(score);
+//     }
+//     if (x[0] == x[2]) {
+//       score++;
+//       console.log(y);
+//       console.log(z);
+//       console.log(score);
+//     }
+//   }
+//   return score;
+// }
+
+// function bmi(weight, height) {
+//   let calc = weight / (height ^ 2);
+
+//   if (calc <= 18.5) {
+//     return "Underweight";
+//   } else if (calc <= 25) {
+//     return "Normal";
+//   } else if (calc <= 30) {
+//     return "Overweight";
+//   } else {
+//     return "Obese";
+//   }
+// }
+
+const areaOrPerimeter = function (l, w) {
+  if (l == w) {
+    return l * w;
+  } else {
+    return l + w;
   }
-  return score;
-}
+};
