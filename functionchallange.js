@@ -98,10 +98,31 @@
 //   }
 // }
 
-const areaOrPerimeter = function (l, w) {
-  if (l == w) {
-    return l * w;
-  } else {
-    return l + w;
+// const areaOrPerimeter = function (l, w) {
+//   if (l == w) {
+//     return l * w;
+//   } else {
+//     return l + w;
+//   }
+// };
+function expandedForm(num) {
+  let solution = num.toString();
+  let string = "";
+  let numsToEnd = 0;
+  for (let i = 0; i < solution.length; i++) {
+    if (solution[i] > 0) {
+      string += solution[i];
+      console.log(string);
+      numsToEnd = solution.length - solution[i];
+      for (numsToEnd; numsToEnd >= 1; numsToEnd--) {
+        if (numsToEnd > 0) {
+          string += "0";
+        } else {
+          string += ` + `;
+        }
+      }
+    }
   }
-};
+
+  return string;
+}
