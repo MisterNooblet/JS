@@ -6,7 +6,7 @@ arr.fill(1, 0);
 console.log(arr);
 // 2. Create an array with numbers ranging from 1-100 using
 // the Array.from method.
-const hundred = Array.from({ length: 100 }, (v, i) => 1 + i);
+const hundred = Array.from({ length: 100 }, (xyz, i) => 1 + i);
 console.log(hundred);
 // 3. Convert only values of an object into one array.
 const person = {
