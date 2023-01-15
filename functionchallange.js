@@ -105,24 +105,82 @@
 //     return l + w;
 //   }
 // };
-function expandedForm(num) {
-  let solution = num.toString();
-  let string = "";
-  let numsToEnd = 0;
-  for (let i = 0; i < solution.length; i++) {
-    if (solution[i] > 0) {
-      string += solution[i];
-      console.log(string);
-      numsToEnd = solution.length - solution[i];
-      for (numsToEnd; numsToEnd >= 1; numsToEnd--) {
-        if (numsToEnd > 0) {
-          string += "0";
-        } else {
-          string += ` + `;
-        }
-      }
-    }
-  }
+// function expandedForm(num) {
+//   let solution = num.toString();
+//   let string = "";
+//   let numsToEnd = 0;
+//   for (let i = 0; i < solution.length; i++) {
+//     if (solution[i] > 0) {
+//       string += solution[i];
+//       console.log(string);
+//       numsToEnd = solution.length - solution[i];
+//       for (numsToEnd; numsToEnd >= 1; numsToEnd--) {
+//         if (numsToEnd > 0) {
+//           string += "0";
+//         } else {
+//           string += ` + `;
+//         }
+//       }
+//     }
+//   }
 
-  return string;
-}
+//   return string;
+// }
+
+// let arr = [1, 1, 1, 1, 2, 1, 1, 1];
+// arrangetemps(arr);
+// function arrangetemps(arr) {
+//   let temp1 = [];
+//   let temp2 = [];
+//   temp1.push(arr[1]);
+//   for (const i of arr) {
+//     if (temp1.includes(i) == true) {
+//       temp1.push(i);
+//     } else {
+//       temp2.push(i);
+//     }
+//   }
+//   if (temp1.length < temp2.length) {
+//     console.log(temp1[0]);
+//     return temp1[0];
+//   } else {
+//     console.log(temp2[0]);
+//     return temp2[0];
+//   }
+// }
+
+// let input = [
+//   [18, 20],
+//   [45, 2],
+//   [61, 12],
+//   [37, 6],
+//   [21, 21],
+//   [78, 9],
+// ];
+
+// output = [];
+// shit(input);
+// function shit(arr) {
+//   for (const i of arr) {
+//     if (i[0] >= 55 && i[1] > 7) {
+//       output.push("Senior");
+//     } else {
+//       output.push("Open");
+//     }
+//   }
+// }
+// let friends = ["Ryan", "Kieran", "Mark"];
+
+// function friend(friends){
+//   let myfriends = []
+//   for (const i of friends) {
+//     if(i.length == 4){
+// myfriends.push(i)
+//     }
+//   }
+//   return myfriends;
+// }
+
+let i = 1;
+let x = 1;
+i == x && console.log(true);
