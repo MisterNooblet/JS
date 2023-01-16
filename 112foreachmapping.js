@@ -40,9 +40,8 @@ const randomArray = [
   5555,
 ];
 
-const fal = [];
-
 function showFirstAndLast(arr) {
+  const fal = [];
   arr.forEach(function (val, idx) {
     if (typeof val === "string") {
       fal.push(val);
@@ -50,10 +49,10 @@ function showFirstAndLast(arr) {
       fal.splice(1, fal.length - 2);
     }
   });
+  console.log(fal);
 }
 
 showFirstAndLast(randomArray);
-console.log(fal);
 // 4. Write a function called vowelCount which accepts a string
 // as an argument. The function should return an object
 // which has the count of the number of vowels that are in
