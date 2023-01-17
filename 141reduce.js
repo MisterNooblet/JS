@@ -3,7 +3,6 @@ let values = [565, 8787, 56454, 1, 65, 88, 99, 7878, 0, -1, -345, 888];
 const largest = values.reduce((a, b) => {
   if (a < b) {
     a = b;
-  } else if (a > b) {
   }
   return a;
 });
