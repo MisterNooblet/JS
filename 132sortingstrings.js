@@ -25,9 +25,9 @@ const withUpperCaseAsc = foodsWithUpperCase.sort((a, b) => {
   const aLower = a.toLowerCase();
   const bLower = b.toLowerCase();
 
-  if (a < b) {
+  if (aLower < bLower) {
     return -1;
-  } else if (a > b) {
+  } else if (aLower > bLower) {
     return 1;
   }
   return 0;
@@ -38,9 +38,9 @@ const withUpperCaseDesc = foodsWithUpperCase.sort((a, b) => {
   const aLower = a.toLowerCase();
   const bLower = b.toLowerCase();
 
-  if (a < b) {
+  if (aLower < bLower) {
     return 1;
-  } else if (a > b) {
+  } else if (aLower > bLower) {
     return -1;
   }
   return 0;
