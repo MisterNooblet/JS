@@ -24,7 +24,7 @@ console.log(a); //will return 1 because a is a function that is declared 10
 let i;
 for (i = 0; i < 3; i++) {
   const log = () => {
-    console.log(i); // will log i cause its accesable from inside and it is found before the global i which is undefined
+    console.log(i); // will log 3 3 times because i is global and not local
   };
-  setTimeout(log, 100);
+  setTimeout(log, 0);
 }
