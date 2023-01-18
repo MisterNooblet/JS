@@ -181,6 +181,59 @@
 //   return myfriends;
 // }
 
-let i = 1;
-let x = 1;
-i == x && console.log(true);
+// let i = 1;
+// let x = 1;
+// i == x && console.log(true);
+// function descendingOrder(n) {
+//   let result = [];
+//   for (const i of [...n.toString()]) {
+//     result.unshift(i);
+//   }
+//   console.log(result.join(""));
+//   return result.join("");
+// }
+// descendingOrder(2132);
+
+// simpleMultiplication(555);
+
+// function simpleMultiplication(number) {
+//   return number % 2 == 0 ? number * 8 : number * 9;
+// }
+// array.forEach(element => {
+
+// });
+
+// function isValidWalk(walk) {
+//   let result = Array.from(walk);
+//   if (result.length == 10) {
+//     let test = result.reduce((acc, dir) => {
+//       if (acc[dir]) {
+//         acc[dir]++;
+//       } else {
+//         acc[dir] = 1;
+//       }
+//       return acc;
+//     }, {});
+
+//     if (
+//       test.n &&
+//       test.s &&
+//       test.n == test.s &&
+//       test.w &&
+//       test.e &&
+//       test.w == test.e
+//     ) {
+//       return true;
+//     } else if (test.w && test.e && test.w == test.e) {
+//       return true;
+//     } else if (test.n && test.s && test.n == test.s) {
+//       return true;
+//     }
+//   }
+//   return false;
+// }
+// isValidWalk(["n", "n", "s", "n", "s", "n", "s", "n", "s", "n", "s"]);
+
+doTest([1, 2, 2, 3, 3, 3, 4, 3, 3, 3, 2, 2, 1]);
+
+array.forEach((element) => {});
