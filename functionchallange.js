@@ -234,6 +234,32 @@
 // }
 // isValidWalk(["n", "n", "s", "n", "s", "n", "s", "n", "s", "n", "s"]);
 
-doTest([1, 2, 2, 3, 3, 3, 4, 3, 3, 3, 2, 2, 1]);
+// doTest([1, 2, 2, 3, 3, 3, 4, 3, 3, 3, 2, 2, 1]);
 
-array.forEach((element) => {});
+// array.forEach((element) => {});
+
+
+let arr =  [1,2,5,4,3,2,3,6,4,1,2,3,3,4,5,3,2,1,2,3,5,5,4,3] //{pos:[2,7,14,20], peaks:[5,6,5,5]});
+
+function loopIt(arr) {
+    let plateuNum = 0;
+    let plateuIndex = 0;
+    
+    for(let i = 1; i < arr.length - 1; i++){
+        if ( arr[i] > arr[(i-1)] && arr[i] === arr[i+1]) {
+            plateuNum = arr[i];
+            plateuIndex = i;
+            for (let x = i; x < arr.length ; x++){
+                if(arr[x] === arr[x-1]&&arr[x] > arr[x+1]){
+                    console.log('x',arr[x] , x);
+                    break;
+                }
+            }
+        }else if (arr[i] > arr[i+1] && arr[i] > arr[i-1]) {
+            console.log(arr[i] , i);
+            
+        }
+    }
+}
+
+loopIt(arr);
