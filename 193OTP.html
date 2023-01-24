@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify OTP</title>
+    <style>
+        .container {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .container ul {
+            display: flex;
+            list-style: none;
+        }
+
+        .container ul li input {
+            width: 500px;
+            height: 100px;
+            margin-right: 10px;
+            text-align: center;
+            font-size: 90px;
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Please verify the code we sent you on your mobile</h1>
+        <h3>code : 141242</h3>
+        <ul class="digits">
+            <form action="">
+                <li><input type="number" /></li>
+                <button>Submit</button>
+            </form>
+        </ul>
+    </div>
+</body>
+<script src="/193OTP.js"></script>
+
+</html>
