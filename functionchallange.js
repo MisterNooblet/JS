@@ -239,27 +239,173 @@
 // array.forEach((element) => {});
 
 
-let arr =  [1,2,5,4,3,2,3,6,4,1,2,3,3,4,5,3,2,1,2,3,5,5,4,3] //{pos:[2,7,14,20], peaks:[5,6,5,5]});
+let array =  [1,2,5,4,3,2,3,6,4,1,2,3,3,4,5,3,2,1,2,3,5,5,4,3] //{pos:[2,7,14,20], peaks:[5,6,5,5]});
 
-function loopIt(arr) {
-    let plateuNum = 0;
-    let plateuIndex = 0;
+// function loopIt(arr) {
+//     let plateuNum = 0;
+//     let plateuIndex = 0;
     
-    for(let i = 1; i < arr.length - 1; i++){
-        if ( arr[i] > arr[(i-1)] && arr[i] === arr[i+1]) {
-            plateuNum = arr[i];
-            plateuIndex = i;
-            for (let x = i; x < arr.length ; x++){
-                if(arr[x] === arr[x-1]&&arr[x] > arr[x+1]){
-                    console.log('x',arr[x] , x);
-                    break;
-                }
-            }
-        }else if (arr[i] > arr[i+1] && arr[i] > arr[i-1]) {
-            console.log(arr[i] , i);
+//     for(let i = 1; i < arr.length - 1; i++){
+//         if ( arr[i] > arr[(i-1)] && arr[i] === arr[i+1]) {
+//             plateuNum = arr[i];
+//             plateuIndex = i;
+//             for (let x = i; x < arr.length ; x++){
+//                 if(arr[x] === arr[x-1]&&arr[x] > arr[x+1]){
+//                     console.log('x',arr[x] , x);
+//                     break;
+//                 }
+//             }
+//         }else if (arr[i] > arr[i+1] && arr[i] > arr[i-1]) {
+//             console.log(arr[i] , i);
             
-        }
-    }
+//         }
+//     }
+// }
+
+// loopIt(arr);
+// const myForEach = (arr, cb) => {
+//     for(let i = 0; i < arr.length; i++){
+//         const output = arr[i]
+//         cb(output)
+//     }
+// }
+// myForEach(array, (item) =>{
+//     console.log(item);
+// })
+
+// const myFilter = (arr , cb) =>{
+//     for (let i = 0; i < arr.length; i++) {
+//         const output = arr[i]
+//         cb(output)
+        
+//     }
+// }
+
+// myFilter(array , (item) =>{
+//     item > 5 && console.log(item);
+// })
+// const numbers = [1, 2, 3, 4, 5];
+
+// // --------------
+
+// Array.prototype.forEachLoop = function(callback) {
+//     for (let i = 0; i < this.length; i++) {
+//         callback(this[i], i, this);
+//     }
+//   };
+  
+// // forEach
+// numbers.forEachLoop((number , idx ,arr) => {
+//     console.log(number ,idx,arr);
+//   });
+
+
+//   Array.prototype.mapLoop = function(callback) {
+//     const newArr = [];
+//     for (let i = 0; i < this.length; i++) {
+//       newArr.push(callback(this[i], i, this));
+//     }
+//     return newArr;
+//   };
+
+//   // map
+//   debugger;
+// const double = numbers.mapLoop((number) => {
+//      return number * 2;
+//   });
+//   console.log(double);
+//   // 
+  
+//   Array.prototype.filterLoop = function(callback) {
+//     const newArr = [];
+//     for (let i = 0; i < this.length; i++) {
+//       if (callback(this[i], i, this)) {
+//         newArr.push(this[i]);
+//       }
+//     }
+//     return newArr;
+//   };
+// // filter
+// const even = numbers.filterLoop((number) => {
+//     return number % 2 === 0;
+//   });
+//   console.log(even)
+
+
+
+// // forEach
+// numbers.forEachLoop((number) => {
+//   console.log(number);
+// });
+
+
+
+// Array.prototype.forEachLoop = function(callback) {
+//     for (let i = 0; i < this.length; i++) {
+//      return callback(this[i], i, this);
+//     }
+//   };
+
+// // forEach
+// numbers.forEachLoop((number) => {
+//     console.log(number);
+// });
+
+  
+//   Array.prototype.mapLoop = function(callback) {
+//     const newArr = [];
+//     for (let i = 0; i < this.length; i++) {
+//       newArr.push(callback(this[i], i, this));
+//     }
+//     return newArr;
+//   };
+  
+
+
+//   Array.prototype.filterLoop = function(callback) {
+//     const newArr = [];
+//     for (let i = 0; i < this.length; i++) {
+//       if (callback(this[i], i, this)) {
+//         newArr.push(this[i]);
+//       }
+//     }
+//     return newArr;
+//   };
+
+let people = [
+  { name: "Jane Doe", age: 30 },
+  { name: "John Doe", age: 33 },
+  { name: "Mike Doe", age: 31 },
+  { name: "Tom Doe", age: 35 },
+  { name: "Danny Doe", age: 37 }
+]
+
+let myForIn = function(obj , callback)  {
+for (let i = 0; i < obj.length; i++) {
+  const element = obj[i];
+    callback(element)
+
+}
 }
 
-loopIt(arr);
+myForIn(people , (el) => {
+  console.log(el.name);
+})
+
+Array.prototype.myFind = function (callback) {
+  let result;
+  for (let i = 0; i < this.length; i++) {
+    const element = this[i];
+    let isFound = callback(element)
+    if (isFound) {
+      result = element;
+      break;
+    }
+  }
+  return result
+}
+
+numberz = [2,6,5,4,3,99]
+
+numberz.myFind(el => el > 10)
+console.log(numberz.myFind(el => el == 5));
