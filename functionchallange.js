@@ -239,12 +239,12 @@
 // array.forEach((element) => {});
 
 
-let array =  [1,2,5,4,3,2,3,6,4,1,2,3,3,4,5,3,2,1,2,3,5,5,4,3] //{pos:[2,7,14,20], peaks:[5,6,5,5]});
+let array = [1, 2, 5, 4, 3, 2, 3, 6, 4, 1, 2, 3, 3, 4, 5, 3, 2, 1, 2, 3, 5, 5, 4, 3] //{pos:[2,7,14,20], peaks:[5,6,5,5]});
 
 // function loopIt(arr) {
 //     let plateuNum = 0;
 //     let plateuIndex = 0;
-    
+
 //     for(let i = 1; i < arr.length - 1; i++){
 //         if ( arr[i] > arr[(i-1)] && arr[i] === arr[i+1]) {
 //             plateuNum = arr[i];
@@ -257,7 +257,7 @@ let array =  [1,2,5,4,3,2,3,6,4,1,2,3,3,4,5,3,2,1,2,3,5,5,4,3] //{pos:[2,7,14,20
 //             }
 //         }else if (arr[i] > arr[i+1] && arr[i] > arr[i-1]) {
 //             console.log(arr[i] , i);
-            
+
 //         }
 //     }
 // }
@@ -277,7 +277,7 @@ let array =  [1,2,5,4,3,2,3,6,4,1,2,3,3,4,5,3,2,1,2,3,5,5,4,3] //{pos:[2,7,14,20
 //     for (let i = 0; i < arr.length; i++) {
 //         const output = arr[i]
 //         cb(output)
-        
+
 //     }
 // }
 
@@ -293,7 +293,7 @@ let array =  [1,2,5,4,3,2,3,6,4,1,2,3,3,4,5,3,2,1,2,3,5,5,4,3] //{pos:[2,7,14,20
 //         callback(this[i], i, this);
 //     }
 //   };
-  
+
 // // forEach
 // numbers.forEachLoop((number , idx ,arr) => {
 //     console.log(number ,idx,arr);
@@ -315,7 +315,7 @@ let array =  [1,2,5,4,3,2,3,6,4,1,2,3,3,4,5,3,2,1,2,3,5,5,4,3] //{pos:[2,7,14,20
 //   });
 //   console.log(double);
 //   // 
-  
+
 //   Array.prototype.filterLoop = function(callback) {
 //     const newArr = [];
 //     for (let i = 0; i < this.length; i++) {
@@ -351,7 +351,7 @@ let array =  [1,2,5,4,3,2,3,6,4,1,2,3,3,4,5,3,2,1,2,3,5,5,4,3] //{pos:[2,7,14,20
 //     console.log(number);
 // });
 
-  
+
 //   Array.prototype.mapLoop = function(callback) {
 //     const newArr = [];
 //     for (let i = 0; i < this.length; i++) {
@@ -359,7 +359,7 @@ let array =  [1,2,5,4,3,2,3,6,4,1,2,3,3,4,5,3,2,1,2,3,5,5,4,3] //{pos:[2,7,14,20
 //     }
 //     return newArr;
 //   };
-  
+
 
 
 //   Array.prototype.filterLoop = function(callback) {
@@ -380,15 +380,15 @@ let people = [
   { name: "Danny Doe", age: 37 }
 ]
 
-let myForIn = function(obj , callback)  {
-for (let i = 0; i < obj.length; i++) {
-  const element = obj[i];
+let myForIn = function (obj, callback) {
+  for (let i = 0; i < obj.length; i++) {
+    const element = obj[i];
     callback(element)
 
-}
+  }
 }
 
-myForIn(people , (el) => {
+myForIn(people, (el) => {
   console.log(el.name);
 })
 
@@ -405,7 +405,7 @@ Array.prototype.myFind = function (callback) {
   return result
 }
 
-numberz = [2,6,5,4,3,99]
+numberz = [2, 6, 5, 4, 3, 99];
 
-numberz.myFind(el => el > 10)
+numberz.myFind(el => el > 10);
 console.log(numberz.myFind(el => el == 5));
