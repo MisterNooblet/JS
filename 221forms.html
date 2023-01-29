@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            border: 2px solid black;
+            border-radius: 5px;
+            padding: 5px;
+        }
+
+        form * {
+            margin: 1rem;
+        }
+
+        #review-btn {
+            background-color: yellow;
+        }
+
+        #modify-btn {
+            background-color: orange;
+            display: none;
+        }
+
+        #submit-btn {
+            background-color: green;
+            color: white;
+            display: none;
+        }
+
+        ul {
+            list-style: none;
+            border: 2px solid black;
+            border-radius: 5px;
+            display: none;
+
+        }
+
+        ul label {
+            font-style: bold;
+            font-size: larger;
+        }
+
+        h1 {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <H1 id="formMessage"></H1>
+    <form id="form" action="">
+        Your Name:<input id="nameInput" name="name" type="text" placeholder="Name">
+        Your Age:<input id="ageInput" name="age" type="number">
+        Your Email:<input id="emailInput" name="email" type="text" placeholder="Email">
+        <button id="review-btn" type="button">Review</button>
+        <ul id="reviewList">
+            <label for="">Your Name:</label>
+            <li id="reviewName"></li>
+            <label for="">Your Age:</label>
+            <li id="reviewAge"></li>
+            <label for="">Your Email:</label>
+            <li id="reviewEmail"></li>
+        </ul>
+        <button id="modify-btn" type="button">Modify</button>
+        <button id="submit-btn" type="submit">Submit</button>
+    </form>
+</body>
+<script src="/221forms.js"></script>
+
+</html>
