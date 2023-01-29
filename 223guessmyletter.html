@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-size: 62.5%;
+            background-color: gray;
+        }
+
+        #questionMark {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 4rem;
+            height: 4rem;
+            padding: 2px;
+            border: 1px solid black;
+            border-radius: 5px;
+
+        }
+
+        h1 {
+            font-size: 3rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+        }
+
+        h4 {
+            font-size: 1.6rem;
+        }
+
+        #title {
+            border-bottom: 5px solid rgba(0, 0, 0, 0.5);
+        }
+
+        button {
+            font-size: 1.5rem;
+            background-color: green;
+            cursor: pointer;
+        }
+
+        .red {
+            color: red;
+        }
+
+        .green {
+            color: lime;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        #gameStatus {
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+    <H1 id="title">Guess my letter #️⃣</H1>
+    <h1 id="questionMark" class="green">❔</h1>
+    <h3 id="gameStatus">Start Guessing!</h3>
+    <h3 id="playAgain" class="hidden">Would you like to play again?</h3>
+    <button id="yesBtn" class="hidden">✔</button>
+    <h2>Keys Guessed</h2>
+    <h4 id="keysGuessed"></h4>
+</body>
+<script src="/223guessmyletter.js"></script>
+
+</html>
