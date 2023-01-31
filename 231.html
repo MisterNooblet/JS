@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .clock {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="clock">
+        <h1 id="hours">00</h1>
+        <h1>:</h1>
+        <h1 id="minutes">00</h1>
+        <h1>:</h1>
+        <h1 id="seconds">00</h1>
+    </div>
+</body>
+<script>
+
+    setInterval(settime, 1000)
+
+    function settime() {
+        const hours = document.getElementById('hours')
+        const minutes = document.getElementById('minutes')
+        const seconds = document.getElementById('seconds')
+        const date = new Date()
+        const hrs = date.getHours()
+        const mns = date.getMinutes()
+        const secs = date.getSeconds()
+        hours.innerHTML = hrs
+        minutes.innerHTML = mns
+        seconds.innerHTML = secs
+
+    }
+
+</script>
+
+</html>
