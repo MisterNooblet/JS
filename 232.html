@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .clock {
+        .clock,
+        .buttons {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -21,37 +22,77 @@
         <h1>:</h1>
         <h1 id="minutes">00</h1>
         <h1>:</h1>
-        <h1 id="seconds">00</h1>
+        <h1 id="seconds">0000</h1>
+    </div>
+    <div class="buttons">
+        <button id="reset">RESET</button>
+        <button id="pause">PAUSE</button>
+        <button id="start">START</button>
     </div>
 </body>
 <script>
+    let mins = 0
+    let secs = 0
+    let ms = 0
+    const hours = document.getElementById('hours')
+    const minutes = document.getElementById('minutes')
+    const seconds = document.getElementById('seconds')
+    const pauseBtn = document.querySelector('#pause');
+    const startBtn = document.querySelector('#start');
+    const resetBtn = document.querySelector('#reset');
+    let stopwatch
+    resetBtn.addEventListener('click', function () {
+        mins = 0
+        secs = 0
+        ms = 0
+        hours.innerHTML = '00'
+        minutes.innerHTML = '00'
+        seconds.innerHTML = '0000'
+    })
+    pauseBtn.addEventListener('click', function () {
+        clearInterval(stopwatch)
+    })
+    startBtn.addEventListener('click', function () {
+        stopwatch = setInterval(settime, 10)
+    })
 
-    setInterval(settime, 1000)
 
     function settime() {
-        const hours = document.getElementById('hours')
-        const minutes = document.getElementById('minutes')
-        const seconds = document.getElementById('seconds')
-        const date = new Date()
-        const hrs = date.getHours()
-        const mns = date.getMinutes()
-        const secs = date.getSeconds()
-        if (hrs.toString().length < 2) {
-            hours.innerHTML = `0${hrs}`
-        } else {
-            hours.innerHTML = hrs
+        ms += 10
+        if (ms === 1000) {
+            secs += 1
+            ms = 0
         }
-        if (mns.toString().length < 2) {
-            minutes.innerHTML = `0${mns}`
-        } else {
-            minutes.innerHTML = mns
-        }
-        if (secs.toString().length < 2) {
-            seconds.innerHTML = `0${secs}`
-        } else {
-            seconds.innerHTML = secs
+        if (secs === 60) {
+            mins += 1
+            secs = 0
         }
 
+        if (ms === 0) {
+            seconds.innerHTML = `0000`
+        }
+        else if (ms.toString().length == 3) {
+            seconds.innerHTML = `0${ms}`
+
+        } else if (ms.toString().length == 2) {
+            seconds.innerHTML = `00${ms}`
+        } else {
+            seconds.innerHTML = ms
+
+        }
+        if (secs.toString().length < 2) {
+            minutes.innerHTML = `0${secs}`
+        } else {
+            minutes.innerHTML = secs
+
+        }
+
+        if (mins.toString().length < 2) {
+            hours.innerHTML = `0${mins}`
+        } else {
+
+            hours.innerHTML = mins
+        }
     }
 
 </script>
