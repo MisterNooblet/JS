@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch joke</title>
+</head>
+
+<body>
+    <button id="btn">Make me laugh</button>
+    <div id="output"></div>
+</body>
+<script>
+    const btn = document.getElementById('btn')
+    const output = document.getElementById('output')
+    btn.addEventListener('click', getjoke)
+
+    async function getjoke() {
+        try {
+            let result = await fetch('https://api.jokes.one/jod2')
+            result = await result.json()
+            let joke = result.contents.jokes[0]
+            output.innerHTML = `<h1>${joke.description}</h1><h3>${joke.date}</h3><br><h4>${joke.joke.title}</h4><p>${joke.joke.text}</p>`
+        } catch (error) {
+            console.log('Something went wrong!', error);
+        }
+    }
+</script>
+
+</html>
