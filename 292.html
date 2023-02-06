@@ -19,7 +19,7 @@
 
     async function getjoke() {
         try {
-            let result = await fetch('https://api.jokes.one/jod2')
+            let result = await fetch('https://api.jokes.one/jod')
             result = await result.json()
             let joke = result.contents.jokes[0]
             output.innerHTML = `<h1>${joke.description}</h1><h3>${joke.date}</h3><br><h4>${joke.joke.title}</h4><p>${joke.joke.text}</p>`
