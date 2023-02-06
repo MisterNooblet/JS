@@ -19,15 +19,9 @@
 
     function getjoke() {
         fetch('https://api.jokes.one/jod')
-            .then(res => res.text())
-            .then(data => {
-                let result = JSON.parse(data)
-                return result.contents.jokes[0]
-            })
-            .then(joke => {
-                console.log(joke);
-                output.innerHTML = `<h1>${joke.description}</h1><h3>${joke.date}</h3><br><h4>${joke.joke.title}</h4><p>${joke.joke.text}</p>`
-            })
+            .then(res => res.json())
+            .then(data => data.contents.jokes[0])
+            .then(joke => { output.innerHTML = `<h1>${joke.description}</h1><h3>${joke.date}</h3><br><h4>${joke.joke.title}</h4><p>${joke.joke.text}</p>` })
     }
 </script>
 
