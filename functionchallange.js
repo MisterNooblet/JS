@@ -314,7 +314,7 @@ let array = [1, 2, 5, 4, 3, 2, 3, 6, 4, 1, 2, 3, 3, 4, 5, 3, 2, 1, 2, 3, 5, 5, 4
 //      return number * 2;
 //   });
 //   console.log(double);
-//   // 
+//   //
 
 //   Array.prototype.filterLoop = function(callback) {
 //     const newArr = [];
@@ -372,40 +372,89 @@ let array = [1, 2, 5, 4, 3, 2, 3, 6, 4, 1, 2, 3, 3, 4, 5, 3, 2, 1, 2, 3, 5, 5, 4
 //     return newArr;
 //   };
 
-let people = [
-  { name: "Jane Doe", age: 30 },
-  { name: "John Doe", age: 33 },
-  { name: "Mike Doe", age: 31 },
-  { name: "Tom Doe", age: 35 },
-  { name: "Danny Doe", age: 37 }
-]
+// let people = [
+//   { name: "Jane Doe", age: 30 },
+//   { name: "John Doe", age: 33 },
+//   { name: "Mike Doe", age: 31 },
+//   { name: "Tom Doe", age: 35 },
+//   { name: "Danny Doe", age: 37 }
+// ]
 
-let myForIn = function (obj, callback) {
-  for (let i = 0; i < obj.length; i++) {
-    const element = obj[i];
-    callback(element)
+// let myForIn = function (obj, callback) {
+//   for (let i = 0; i < obj.length; i++) {
+//     const element = obj[i];
+//     callback(element)
 
-  }
-}
+//   }
+// }
 
-myForIn(people, (el) => {
-  console.log(el.name);
-})
+// myForIn(people, (el) => {
+//   console.log(el.name);
+// })
 
-Array.prototype.myFind = function (callback) {
-  let result;
-  for (let i = 0; i < this.length; i++) {
-    const element = this[i];
-    let isFound = callback(element)
-    if (isFound) {
-      result = element;
-      break;
-    }
-  }
-  return result
-}
+// Array.prototype.myFind = function (callback) {
+//   let result;
+//   for (let i = 0; i < this.length; i++) {
+//     const element = this[i];
+//     let isFound = callback(element)
+//     if (isFound) {
+//       result = element;
+//       break;
+//     }
+//   }
+//   return result
+// }
 
-numberz = [2, 6, 5, 4, 3, 99];
+// numberz = [2, 6, 5, 4, 3, 99];
 
-numberz.myFind(el => el > 10);
-console.log(numberz.myFind(el => el == 5));
+// numberz.myFind(el => el > 10);
+// console.log(numberz.myFind(el => el == 5));
+
+
+// function twoSum(numbers, target) {
+//   let result = []
+//   for (let i = 0; i < numbers.length; i++) {
+//     for (let x = i + 1; x < numbers.length; x++) {
+//       if (numbers[i] + numbers[x] === target && result.length < 2) {
+//         result.push(i)
+//         result.push(x)
+//       }
+//     }
+//   }
+//   return result;
+// }
+// twoSum([1, 2, 3], 4)
+// console.log(twoSum([5, 2, 1, 4, 7 , 9 , 3], 4));
+
+// let str = 'kawabanga'
+
+// let result = [...str].slice(1,str.length - 1).join('')
+
+// console.log(result);
+
+// function sumDigPow(a, b) {
+//   let result = []
+//   let pow = 1
+//   let numToCheck
+//   let numRes = 0
+//   for (let i = a; i <= b; i++) {
+
+//     if (Math.pow(i, pow) === i && i.toString().length == 1) {
+//       result.push(i)
+//     } else if (i.toString().length > 1) {
+//       numToCheck = i.toString().split('')
+//       numToCheck.forEach(element => {
+//         numRes += Math.pow(element, pow)
+//         pow++
+//       });
+//       if (numRes === i) {
+//         result.push(i)
+//       }
+//       numRes = 0
+//       pow = 1
+//     }
+//   }
+//   return result
+// }
+
+// console.log(sumDigPow(1, 100));

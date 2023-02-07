@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Get API Info</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-size: 62.5%;
+            background-color: black;
+        }
+
+        .searchcontainer {
+            display: flex;
+            justify-content: center;
+        }
+
+        #search,
+        #moreinfo {
+            padding: 1rem;
+            background-color: grey;
+            border: none;
+            border: 1px solid black;
+            cursor: pointer;
+
+        }
+
+        #searchbar {
+            background-color: orange;
+            border: 1px solid black;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .resultcontainer,
+        .moreinfocontainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .resultcontainer a {
+            color: orange;
+            text-decoration: none;
+        }
+
+        .resultcontainer h1 {
+            font-size: 3rem;
+        }
+
+        .flex-row {
+            display: flex;
+        }
+
+        #followers,
+        #following {
+            color: orange;
+            font-size: 1.3rem;
+            margin-right: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+
+        <div class="searchcontainer">
+            <input id="searchbar" type="text"><button id="search">🔍</button>
+        </div>
+        <div class="resultcontainer" class="hiddens">
+            <a id='userHref' href="">
+                <h1 id="username"></h1>
+            </a>
+            <img id="userImg" src="" alt="">
+            <button id="moreinfo">More Info</button>
+        </div>
+        <div class="moreinfocontainer">
+            <div class="flex-row">
+                <h1 id="followers"></h1>
+                <h1 id="following"></h1>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="/301.js"></script>
+
+</html>
