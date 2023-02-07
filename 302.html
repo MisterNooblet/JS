@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie lookup</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-size: 62.5%;
+            background-color: black;
+        }
+
+        .searchcontainer {
+            display: flex;
+            justify-content: center;
+        }
+
+        #search,
+        #moreinfo {
+            padding: 1rem;
+            background-color: grey;
+            border: none;
+            border: 1px solid black;
+            cursor: pointer;
+
+        }
+
+        #searchbar {
+            background-color: orange;
+            border: 1px solid black;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        .resultcontainer,
+        .moreinfocontainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .resultcontainer {
+            color: orange;
+            text-decoration: none;
+        }
+
+        .resultcontainer h1 {
+            font-size: 3rem;
+        }
+
+        .flex-row {
+            display: flex;
+        }
+
+        .flex-col {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .moreinfocontainer {
+            color: orange;
+        }
+
+        #followers,
+        #following,
+        #repos {
+            color: orange;
+            font-size: 1.3rem;
+            margin-right: 1rem;
+        }
+
+        .flex-wrap {
+            flex-wrap: wrap;
+        }
+
+        ul {
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+
+        <div class="searchcontainer">
+            <input id="searchbar" type="text"><button id="search">🔍</button>
+        </div>
+        <div class="resultcontainer" class="hiddens">
+            <h1 id="username"></h1>
+            <img id="userImg" src="" alt="">
+            <button id="moreinfo">More Info</button>
+        </div>
+        <div id="moreinfobox" class="moreinfocontainer hidden">
+            <div class="flex-col">
+                <h1 id="genre"></h1>
+                <h1 id="year"></h1>
+                <h1 id="plot"></h1>
+                <h1 id="director"></h1>
+                <h1 id="actors"></h1>
+                <h1>Ratings:</h1>
+                <ul id="ratings">
+
+                </ul>
+            </div>
+            <div id="followers" class="flex-row flex-wrap">
+
+            </div>
+        </div>
+    </section>
+
+</body>
+<script src="/302.js"></script>
+
+</html>
