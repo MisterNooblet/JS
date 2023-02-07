@@ -61,10 +61,15 @@
         }
 
         #followers,
-        #following {
+        #following,
+        #repos {
             color: orange;
             font-size: 1.3rem;
             margin-right: 1rem;
+        }
+
+        .flex-wrap {
+            flex-wrap: wrap;
         }
     </style>
 </head>
@@ -86,6 +91,10 @@
             <div class="flex-row">
                 <h1 id="followers"></h1>
                 <h1 id="following"></h1>
+                <h1 id="repos"></h1>
+            </div>
+            <div id="followers" class="flex-row flex-wrap">
+
             </div>
         </div>
     </section>
